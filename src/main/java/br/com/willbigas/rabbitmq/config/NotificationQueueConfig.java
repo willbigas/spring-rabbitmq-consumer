@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class NotificationRabbitConfig {
+public class NotificationQueueConfig {
 
 	public static final String QUEUE_NAME = "notification.queue";
 	public static final String DLQ_NAME = "notification.queue.dlq";

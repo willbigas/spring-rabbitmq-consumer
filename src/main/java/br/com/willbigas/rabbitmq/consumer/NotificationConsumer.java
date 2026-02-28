@@ -1,6 +1,6 @@
 package br.com.willbigas.rabbitmq.consumer;
 
-import br.com.willbigas.rabbitmq.config.NotificationRabbitConfig;
+import br.com.willbigas.rabbitmq.config.NotificationQueueConfig;
 import br.com.willbigas.rabbitmq.dto.NotificationMessage;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class NotificationConsumer {
 
-    @RabbitListener(queues = NotificationRabbitConfig.QUEUE_NAME)
+    @RabbitListener(queues = NotificationQueueConfig.QUEUE_NAME)
     public void handleNotification(NotificationMessage message) {
         try {
             System.out.println("Received: " + message);
@@ -21,7 +21,7 @@ public class NotificationConsumer {
         }
     }
 
-    @RabbitListener(queues = NotificationRabbitConfig.DLQ_NAME)
+    @RabbitListener(queues = NotificationQueueConfig.DLQ_NAME)
     public void handleDlq(NotificationMessage message) {
         System.err.println("Mensagem encaminhada para DLQ: " + message);
         // Aqui você pode implementar lógica de alerta, log ou retentativa manual
