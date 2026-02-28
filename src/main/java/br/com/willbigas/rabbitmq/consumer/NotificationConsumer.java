@@ -15,6 +15,7 @@ public class NotificationConsumer {
             // Simulate processing
             Thread.sleep(1000); // 1 second processing time
             System.out.println("Notification sent to: " + message.to());
+            throw new RuntimeException("Erro ao processar mensagem");
         } catch (Exception e) {
             // Lançando exceção para que o RabbitMQ envie para a DLQ
             throw new RuntimeException("Erro ao processar mensagem, enviando para DLQ", e);
