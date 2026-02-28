@@ -18,6 +18,7 @@ public class RabbitConfig {
 		SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
 		factory.setConnectionFactory(connectionFactory);
 		factory.setConsumerTagStrategy(queue -> "spring-rabbitmq-consumer-" + queue);
+		factory.setMessageConverter(messageConverter(new ObjectMapper()));
 		return factory;
 	}
 
