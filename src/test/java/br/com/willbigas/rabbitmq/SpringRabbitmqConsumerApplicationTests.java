@@ -1,4 +1,4 @@
-package br.com.willbigas.rabbbitmq;
+package br.com.willbigas.rabbitmq;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

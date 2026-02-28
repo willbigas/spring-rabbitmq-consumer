@@ -1,7 +1,7 @@
-package br.com.willbigas.rabbbitmq.consumer;
+package br.com.willbigas.rabbitmq.consumer;
 
-import br.com.willbigas.rabbbitmq.config.RabbitConfig;
-import br.com.willbigas.rabbbitmq.dto.NotificationMessage;
+import br.com.willbigas.rabbitmq.config.RabbitConfig;
+import br.com.willbigas.rabbitmq.dto.NotificationMessage;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 

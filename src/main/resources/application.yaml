@@ -1,3 +1,7 @@
 spring:
   application:
     name: spring-rabbitmq-consumer
+
+
+server:
+  port: 8081
